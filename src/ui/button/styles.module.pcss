@@ -1,0 +1,94 @@
+@import "../../_variables.pcss";
+
+@define-mixin button-contained $color, $background {
+    background: $background;
+    color: $color;
+
+    &:hover {
+        filter: brightness(1.5);
+    }
+
+    &:active {
+        filter: brightness(.9);
+    }
+}
+
+@define-mixin button-outlined $color, $background {
+    background: none;
+    color: $background;
+    border: 1px solid $background;
+
+    &:hover {
+        filter: brightness(1.5);
+    }
+
+    &:active {
+        background: $background;
+        color: $color;
+    }
+}
+
+@define-mixin button-link $color, $background {
+    background: none;
+    color: $background;
+    border: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:active {
+        filter: brightness(1.5);
+    }
+}
+
+.button {
+    outline: none;
+    background: none;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: $rounded;
+
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+    align-items: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:disabled{
+        filter: brightness(.7);
+        cursor: not-allowed;
+    }
+
+    &__primary {
+        &__contained {
+            @mixin button-contained $color-default, $background-primary;
+        }
+
+        &__outlined {
+            @mixin button-outlined $color-default, $background-primary;
+        }
+
+        &__link {
+            @mixin button-link $color-default, $background-primary;
+        }
+    }
+
+    &__secondary {
+        &__contained {
+            @mixin button-contained $color-secondary, $background-secondary;
+        }
+
+        &__outlined {
+            @mixin button-outlined $color-secondary, $background-secondary;
+        }
+
+        &__link {
+            @mixin button-link $color-secondary, $background-secondary;
+        }
+    }
+
+}
