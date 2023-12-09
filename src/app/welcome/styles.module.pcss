@@ -1,0 +1,13 @@
+.container {
+    height: 100svh;
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: repeat('auto-fill', minmax(300px, 1fr));
+
+    & > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}
