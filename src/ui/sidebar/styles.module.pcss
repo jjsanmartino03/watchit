@@ -1,0 +1,33 @@
+@import "../../_variables.pcss";
+@import "../../_mixins.pcss";
+
+.sidebar {
+    grid-area: sidebar;
+    padding: 1rem;
+    width: 100%;
+
+    @mixin flex column, flex-start, flex-start;
+    background-color: $background-alternative;
+
+    & > hr{
+        width: 100%;
+        border-color: $background-secondary-800;
+    }
+
+    &__navLinks {
+        margin:0;
+        padding: .5rem 0;
+        @mixin flex column, center, flex-start;
+        gap: .7rem;
+
+        font-size: 1.3rem;
+
+        & > li {
+            list-style: none;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 100%;
+    }
+}

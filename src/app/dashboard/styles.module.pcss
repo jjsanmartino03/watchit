@@ -1,0 +1,30 @@
+@import "../../_variables.pcss";
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    height: 100svh;
+    grid-template-rows: min-content min-content;
+
+    &__sidebar{
+        grid-column: 1 / 13;
+    }
+
+    &__main {
+        padding: 1rem;
+        grid-column: 1 / 13;
+    }
+
+
+    @media screen and (min-width: 768px) {
+        grid-template-rows: auto;
+        &__sidebar {
+            grid-column: 1 / 4;
+            height: 100%;
+        }
+
+        &__main {
+            grid-column: 4/13;
+        }
+    }
+}
