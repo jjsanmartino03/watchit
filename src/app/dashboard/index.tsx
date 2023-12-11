@@ -1,8 +1,8 @@
 import {Outlet, useNavigate} from "react-router-dom";
 import {useEffect} from "react";
 import styles from './styles.module.pcss'
-import Sidebar from "../../ui/sidebar";
-import {useAppDispatch, useAppSelector} from "../../redux/hooks.ts";
+import Sidebar from "@/ui/sidebar";
+import {useAppSelector} from "@redux/hooks.ts";
 
 
 export default function () {
@@ -11,7 +11,6 @@ export default function () {
 
     const user = useAppSelector(state => state.auth.user);
 
-    const dispatch = useAppDispatch();
     useEffect(() => {
         // dispatch(fetchUser())
     }, [])

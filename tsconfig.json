@@ -23,19 +23,19 @@
     "noFallthroughCasesInSwitch": true,
     "paths": {
       "@/*": [
-        "src/*"
+        "./src/*"
       ],
       "@ui/*": [
-        "src/ui/*"
+        "./src/ui/*"
       ],
       "@redux/*": [
-        "src/redux/*"
+        "./src/redux/*"
       ],
       "@services/*": [
-        "src/services/*"
+        "./src/services/*"
       ],
       "@utils/*": [
-        "src/utils/*"
+        "./src/utils/*"
       ]
     }
   },
