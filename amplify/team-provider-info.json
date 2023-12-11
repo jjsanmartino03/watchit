@@ -1,0 +1,33 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-watchit-dev-94027-authRole",
+      "UnauthRoleArn": "arn:aws:iam::571138225380:role/amplify-watchit-dev-94027-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::571138225380:role/amplify-watchit-dev-94027-authRole",
+      "Region": "sa-east-1",
+      "DeploymentBucketName": "amplify-watchit-dev-94027-deployment",
+      "UnauthRoleName": "amplify-watchit-dev-94027-unauthRole",
+      "StackName": "amplify-watchit-dev-94027",
+      "StackId": "arn:aws:cloudformation:sa-east-1:571138225380:stack/amplify-watchit-dev-94027/521a1a70-9759-11ee-83ba-0629e95ea626",
+      "AmplifyAppId": "d2vkg16yfldhcn",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-watchit-dev-94027-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "auth": {
+        "watchit560a6228": {}
+      },
+      "function": {
+        "watchit7de1f00b": {
+          "deploymentBucketName": "amplify-watchit-dev-94027-deployment",
+          "s3Key": "amplify-builds/watchit7de1f00b-6a767a63413042336e66-build.zip"
+        }
+      },
+      "storage": {
+        "watchlists": {}
+      },
+      "api": {
+        "watchitmovies": {}
+      }
+    }
+  }
+}

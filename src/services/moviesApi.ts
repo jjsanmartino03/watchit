@@ -8,7 +8,8 @@ class MoviesClient {
 
     public async getPopularMovies(page: number) {
         return await this.get("/movie/popular", {
-            page: page.toString()
+            page: page.toString(),
+            appendToResponse: "images,genres",
         })
     }
 
@@ -20,7 +21,7 @@ class MoviesClient {
     }
 
     public async get(path: string, queryParams: URLSearchParams | Record<string, string>) {
-        alert(this.apiKey)
+
         try {
             const result = await axios.get(this.baseUrl + path, {
                 params: {

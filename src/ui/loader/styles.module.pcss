@@ -1,0 +1,27 @@
+@import '@/_variables.pcss';
+
+.loader{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__animation{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 8px solid $background-alternative;
+        border-top-color: $background-primary;
+        animation: rotate 1s infinite linear;
+    }
+
+    @keyframes rotate{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+}

@@ -1,5 +1,5 @@
 import styles from './styles.module.pcss';
-import classnames from "../../utils/classnames.tsx";
+import classnames from "@utils/classnames.tsx";
 
 type ButtonProps = {
     theme?: 'primary' | 'secondary'

@@ -1,8 +1,8 @@
-import {call, put, takeLatest, apply} from 'redux-saga/effects';
+import {apply, call, put, takeLatest} from 'redux-saga/effects';
 import {userLoaded, userLoadFailed, userLoading, userSignedOut} from "./slices/auth.ts";
-import {currentAuthenticatedUser, signOut} from "../services/auth.ts";
+import {currentAuthenticatedUser, signOut} from "@services/auth.ts";
 import {fetchMovies, moviesLoaded, moviesLoadFailed, moviesLoading} from "./slices/movies.ts";
-import moviesApi from "../services/moviesApi.ts";
+import moviesApi from "@services/moviesApi.ts";
 import actionTypes from "./action-types.ts";
 
 function* signOutSagas(): Generator {
@@ -27,7 +27,13 @@ function* fetchUser(): Generator {
 function* fetchMoviesSaga(action: ReturnType<typeof fetchMovies>): Generator {
     try {
         yield put(moviesLoading())
-        const movies = yield apply(moviesApi, 'getPopularMovies', [action.payload.page])
+
+        let movies;
+        if (action.payload.searchKeyword) {
+            movies = yield apply(moviesApi, 'searchByText', [action.payload.searchKeyword , action.payload.page])
+        } else {
+            movies = yield apply(moviesApi, 'getPopularMovies', [action.payload.page])
+        }
         console.log(movies)
         yield put(moviesLoaded(movies));
     } catch (e) {

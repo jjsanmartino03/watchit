@@ -5,8 +5,8 @@ import {useEffect} from "react";
 import {Hub} from "aws-amplify/utils";
 import {signInWithRedirect} from "aws-amplify/auth";
 import {Navigate, useNavigate} from "react-router-dom";
-import {useAppDispatch, useAppSelector} from "../../redux/hooks.ts";
-import {fetchUser} from "../../redux/slices/auth.ts";
+import {useAppDispatch, useAppSelector} from "@redux/hooks.ts";
+import {fetchUser} from "@redux/slices/auth.ts";
 
 function Welcome() {
     const navigate = useNavigate();

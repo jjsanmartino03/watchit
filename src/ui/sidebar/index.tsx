@@ -1,8 +1,8 @@
 import styles from './styles.module.pcss'
 import {Link} from "react-router-dom";
 import Button from "../button";
-import {useAppDispatch, useAppSelector} from "../../redux/hooks.ts";
-import {signOut} from "../../redux/slices/auth.ts";
+import {useAppDispatch, useAppSelector} from "@redux/hooks.ts";
+import {signOut} from "@redux/slices/auth.ts";
 
 export default function Sidebar() {
     const user = useAppSelector(state => state.auth.user);

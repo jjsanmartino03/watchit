@@ -1,11 +1,11 @@
 import {configureStore, Middleware, Tuple} from "@reduxjs/toolkit";
 import {UnknownAction} from "redux";
 import createSagaMiddleware from '@redux-saga/core'
-
-const sagaMiddleware = createSagaMiddleware()
 import authReducer from './slices/auth';
 import rootSaga from "./saga.ts";
 import moviesReducer from "./slices/movies.ts";
+
+const sagaMiddleware = createSagaMiddleware()
 
 export type RootState = {
     auth: ReturnType<typeof authReducer>,

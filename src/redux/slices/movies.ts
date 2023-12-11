@@ -8,6 +8,8 @@ const initialState: {
             genre_ids: number[],
             title: string,
             backdrop_path: string,
+            poster_path: string,
+            overview: string,
         }[]
         total_pages: number,
         total_results: number,
@@ -48,7 +50,7 @@ const moviesSlice = createSlice({
 });
 
 export const fetchMovies = createAction(actionTypes.FETCH_MOVIES,
-    (page: number) => ({payload: {page}}));
+    (page: number, searchKeyword?: string) => ({payload: {page, searchKeyword}}));
 
 export default moviesSlice.reducer;
 

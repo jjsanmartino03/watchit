@@ -8,10 +8,7 @@ const initialState: {
     status: 'idle' | 'loading' | 'failed' | 'success',
     error: any
 } = {
-    user: {
-        username: 'fasdfsa¿',
-        name: 'Julián Sanmartino'
-    },
+    user: null,
     status: "idle",
     error: null,
 }

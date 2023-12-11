@@ -1,0 +1,10 @@
+{
+  "resourceName": "watchlists",
+  "tableName": "watchlists",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

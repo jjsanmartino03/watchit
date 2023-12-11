@@ -2,7 +2,6 @@ import {Outlet, useNavigate} from "react-router-dom";
 import {useEffect} from "react";
 import styles from './styles.module.pcss'
 import Sidebar from "../../ui/sidebar";
-import {fetchUser} from "../../redux/slices/auth.ts";
 import {useAppDispatch, useAppSelector} from "../../redux/hooks.ts";
 
 

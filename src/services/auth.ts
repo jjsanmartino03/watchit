@@ -1,4 +1,4 @@
-import {getCurrentUser, signOut as signOutAmplify, fetchUserAttributes} from "aws-amplify/auth";
+import {fetchUserAttributes, getCurrentUser, signOut as signOutAmplify} from "aws-amplify/auth";
 
 export async function currentAuthenticatedUser() {
     let user = await getCurrentUser();

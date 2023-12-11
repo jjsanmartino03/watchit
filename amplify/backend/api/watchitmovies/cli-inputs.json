@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "paths": {
+    "/movies": {
+      "name": "/movies",
+      "lambdaFunction": "watchit7de1f00b",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update"
+        ]
+      }
+    }
+  }
+}
